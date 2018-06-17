@@ -1,4 +1,5 @@
 var os = require('os');
+var formatTime = require('../modules/formatTime');
 
 function getOSinfo() {
     var type = os.type();
@@ -14,11 +15,10 @@ function getOSinfo() {
     console.log('System:', type);
     console.log('Release:', release);
     console.log('CPU model:', cpu);
-    formatTime.print();
+    formatTime.print(uptime);
     console.log('User name:', userInfo.username);
     console.log('Home dir:', userInfo.homedir);
 }
 
 exports.print = getOSinfo;
-exports.print = uptime;
-var formatTime = require('../modules/formatTime');
+exports.uptime;

@@ -1,3 +1,5 @@
+var OSinfo = require('../modules/OSInfo');
+
 process.stdin.setEncoding('utf-8');
 process.stdin.on('readable', function() {
     var input = process.stdin.read();
@@ -19,6 +21,4 @@ process.stdin.on('readable', function() {
         };
     }
 });
-
-var OSinfo = require('../modules/OSInfo');
 
